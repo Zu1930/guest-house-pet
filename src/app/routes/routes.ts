@@ -17,4 +17,25 @@ const roomsRoute = createRoute({
   component: RoomsPage,
 });
 
-export const routes = [mainRoute, roomsRoute];
+const papersRoute = createRoute({
+  getParentRoute: () => rootRouter,
+  path: '/papers',
+});
+
+const informationRoute = createRoute({
+  getParentRoute: () => rootRouter,
+  path: '/information',
+});
+
+const guesthouseRoute = createRoute({
+  getParentRoute: () => rootRouter,
+  path: '/guesthouse',
+});
+
+export const routes = [
+  mainRoute,
+  roomsRoute,
+  papersRoute,
+  informationRoute,
+  guesthouseRoute,
+];

@@ -1,9 +1,11 @@
 import { Link } from '@tanstack/react-router';
-import { Layout as LayoutAntd, Menu, MenuProps } from 'antd';
+import { Layout as LayoutAntd, Menu, MenuProps, Typography } from 'antd';
 const { Header } = LayoutAntd;
+const { Title } = Typography;
 
 type MenuItem = Required<MenuProps>['items'][number];
 
+// TODO: внести отсюда
 const items: MenuItem[] = [
   {
     label: <Link to='/'>Главная</Link>,
@@ -13,10 +15,18 @@ const items: MenuItem[] = [
     label: <Link to='/rooms'>Номера и цены</Link>,
     key: 'rooms',
   },
-  //   {
-  //     label: <Link to='/information'>Информация</Link>,
-  //     key: 'information',
-  //   },
+  {
+    label: <Link to='/papers'>Статьи</Link>,
+    key: 'papers',
+  },
+  {
+    label: <Link to='/information'>Информация</Link>,
+    key: 'information',
+  },
+  {
+    label: <Link to='/guesthouse'>Полный пансион</Link>,
+    key: 'guesthouse',
+  },
 ];
 
 export const Navbar = () => (
@@ -31,6 +41,9 @@ export const Navbar = () => (
       zIndex: 1,
     }}
   >
+    <Typography style={{ width: '166px' }}>
+      <Title level={3}>Valentina Guest House</Title>
+    </Typography>
     <Menu
       theme='light'
       mode='horizontal'
