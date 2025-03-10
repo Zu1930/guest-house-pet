@@ -5,7 +5,7 @@ const { Title } = Typography;
 
 type MenuItem = Required<MenuProps>['items'][number];
 
-// TODO: внести отсюда
+// TODO: вынести отсюда
 const items: MenuItem[] = [
   {
     label: <Link to='/'>Главная</Link>,
