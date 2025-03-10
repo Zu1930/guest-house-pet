@@ -2,7 +2,7 @@ import { Outlet } from '@tanstack/react-router';
 import { Layout as LayoutAntd, theme } from 'antd';
 
 import { Layout } from 'shared/ui/Layout';
-import { Navbar } from 'widgets/Navbar/ui/Navbar';
+import { Navbar } from 'widgets/Navbar';
 
 const { Content, Footer } = LayoutAntd;
 
